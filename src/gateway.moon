@@ -6,7 +6,7 @@ favorite_foods = {
   "ice cream": "Can't have a food list without a dessert"
 }
 
-class App extends lapis.Application
+class Gateway extends lapis.Application
   [index: "/"]: =>
     -- Render HTML inline for simplicity
     @html ->

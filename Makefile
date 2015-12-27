@@ -1,5 +1,7 @@
 OUT_DIR = ./out
 
+LIB_NAME = gateway
+
 .PHONY: \
 	build \
 	watch \
@@ -13,15 +15,15 @@ OUT_DIR = ./out
 build:
 	mkdir -p ${OUT_DIR};
 	moonc \
-		-o ${OUT_DIR}/app.lua \
-		src/app.moon \
+		-o ${OUT_DIR}/${LIB_NAME}.lua \
+		src/${LIB_NAME}.moon \
 	;
 
 watch:
 	moonc \
 		-w src/app.moon \
-		-o ${OUT_DIR}/app.lua \
-		src/app.moon
+		-o ${OUT_DIR}/${LIB_NAME}.lua \
+		src/${LIB_NAME}.moon
 	;
 
 server:
